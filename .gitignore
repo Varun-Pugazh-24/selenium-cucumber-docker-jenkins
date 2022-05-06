@@ -1,4 +1,18 @@
-.settings
-.classpath
+*target*
+*.jar
+*.war
+*.ear
+*.class
+
+# eclipse specific git ignore
 .project
-target/
+.metadata
+bin/**
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
+.classpath
+.settings/
