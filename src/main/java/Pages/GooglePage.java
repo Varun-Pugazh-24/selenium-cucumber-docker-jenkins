@@ -1,6 +1,6 @@
 package Pages;
 
-import java.util.concurrent.TimeUnit;
+import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -20,31 +20,22 @@ public class GooglePage {
 	}
 
 	public void wait(By by) {
-		WebDriverWait wait = new WebDriverWait(driver, 30);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(by));
-
 	}
 
 	public void goToURL(String string) {
-
 		driver.get(string);
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		driver.manage().window().maximize();
-
 	}
 
 	public void enterKeyword(String string) {
-
 		wait(searchTxtBox);
 		driver.findElement(searchTxtBox).sendKeys(string);
-
 	}
 
 	public void clickSearchBtn() {
-
 		wait(SearchBtn);
 		driver.findElement(SearchBtn).click();
-
 	}
 
 }

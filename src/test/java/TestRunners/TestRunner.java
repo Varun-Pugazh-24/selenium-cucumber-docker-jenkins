@@ -8,7 +8,7 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
 		
 		features = {"src/test/resources/Features"},
-		glue = {"StepDefenitions"},
+		glue = {"StepDefenitions","TestHooks"},
 		plugin = {"pretty"},
 		monochrome=true
 		
